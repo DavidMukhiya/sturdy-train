@@ -3,6 +3,7 @@ package com.david;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -16,9 +17,17 @@ public class AddServlet extends HttpServlet {
 		
 		int k = i + j;
 		
-		PrintWriter out = res.getWriter();
+//		PrintWriter out = res.getWriter();
 		
-		out.println("<h1>Sum is : "+k+"<h1>");
+//		out.println("<h1>Sum is : "+k+"<h1>");
+//		
+//		req.setAttribute("k", k);
+//		
+//		RequestDispatcher rd = req.getRequestDispatcher("cube");
+//		rd.forward(req, res);
+		
+		res.sendRedirect("cube?k="+k);
+	
 		
 		
 	}

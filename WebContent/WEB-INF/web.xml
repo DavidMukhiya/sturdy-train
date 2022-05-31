@@ -8,4 +8,13 @@
   	<servlet-name>add</servlet-name>
   	<url-pattern>/add</url-pattern>
   </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>cube</servlet-name>
+  	<servlet-class>com.david.CubeServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>cube</servlet-name>
+  	<url-pattern>/cube</url-pattern>
+  </servlet-mapping>
 </web-app>
