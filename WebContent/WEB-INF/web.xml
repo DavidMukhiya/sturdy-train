@@ -17,4 +17,13 @@
   	<servlet-name>cube</servlet-name>
   	<url-pattern>/cube</url-pattern>
   </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>square</servlet-name>
+  	<servlet-class>com.david.SquareServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>square</servlet-name>
+  <url-pattern>/sq</url-pattern>
+  </servlet-mapping>
 </web-app>

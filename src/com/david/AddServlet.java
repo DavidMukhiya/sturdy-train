@@ -5,9 +5,11 @@ import java.io.PrintWriter;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 public class AddServlet extends HttpServlet {
 	@Override
@@ -26,8 +28,19 @@ public class AddServlet extends HttpServlet {
 //		RequestDispatcher rd = req.getRequestDispatcher("cube");
 //		rd.forward(req, res);
 		
-		res.sendRedirect("cube?k="+k);
+//		res.sendRedirect("cube?k="+k);
+		
+//		HttpSession session = req.getSession();
+//		session.setAttribute("k", k);
+		
+		
+//		for Cookie
+		
+		Cookie cookie = new Cookie("k", k+""  );
+		res.addCookie(cookie);
+		res.sendRedirect("cube");
 	
+		
 		
 		
 	}
